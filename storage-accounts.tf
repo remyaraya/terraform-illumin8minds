@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "dev-storage01" {
 
 resource "azurerm_storage_container" "dev-storage01-container01" {
   name                  = "backup"
-  storage_account_name  = azurerm_storage_account.rg_dev01_eu2.name
+  storage_account_name  = azurerm_storage_account.dev-storage01.name
   container_access_type = "private"
 }
 
@@ -30,6 +30,6 @@ resource "azurerm_storage_account" "prod-storage01" {
 
 resource "azurerm_storage_container" "prod-storage01-container01" {
   name                  = "backup"
-  storage_account_name  = azurerm_storage_account.dev-storage.name
+  storage_account_name  = azurerm_storage_account.prod-storage01.name
   container_access_type = "private"
 }
