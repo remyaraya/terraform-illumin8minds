@@ -4,6 +4,7 @@ resource "azurerm_storage_account" "dev-storage01" {
   location                 = azurerm_resource_group.rg_dev01_eu2.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  access_tier = "Cool"
   
   tags = {
     environment = "development"
