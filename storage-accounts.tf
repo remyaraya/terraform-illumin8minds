@@ -23,6 +23,7 @@ resource "azurerm_storage_account" "prod-storage01" {
   location                 = azurerm_resource_group.rg_prod01_eu2.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  access_tier = "Cool"
   
   tags = {
     environment = "production"
