@@ -28,7 +28,7 @@ resource "azurerm_storage_account" "prod-storage01" {
   }
 }
 
-resource "azurerm_storage_container" "dev-storage01-container01" {
+resource "azurerm_storage_container" "prod-storage01-container01" {
   name                  = "backup"
   storage_account_name  = azurerm_storage_account.dev-storage.name
   container_access_type = "private"
